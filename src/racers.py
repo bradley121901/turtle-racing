@@ -4,7 +4,6 @@ import random
 class Racer:
     # class attributes
 
-    
     #constructor
     def __init__(self, x, y):
         self.turtle_racer = turtle.Turtle()
@@ -21,4 +20,7 @@ class Racer:
     def move(self):
         self.turtle_racer.setx(self.turtle_racer.xcor() + random.randint(0,3))
     
-    
+    def check_finish(self, finish_xcoord):
+        if self.turtle_racer.xcor() > finish_xcoord - 10:
+            return True
+        
